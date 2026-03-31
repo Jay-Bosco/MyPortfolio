@@ -1,0 +1,145 @@
+import type { Project, Service } from "@/types";
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "Bidoro Waitlist",
+    description: "Landing page and waitlist signup for the Bidoro marketplace platform.",
+    images: [
+      "/images/bidoro-waitlist-1.png",
+      "/images/bidoro-waitlist-2.png",
+      "/images/bidoro-waitlist-3.png",
+      "/images/bidoro-waitlist-4.png",
+      "/images/bidoro-waitlist-5.png",
+    ],
+    tags: ["Next.js", "Node.js", "Express", "Supabase"],
+    liveUrl: "https://bidoro.africa",
+  },
+  {
+    id: 2,
+    title: "Bidoro Marketplace",
+    description: "Full-featured marketplace connecting buyers and sellers across Nigeria.",
+    images: [
+      "/images/bidoro-marketplace-1.png",
+      "/images/bidoro-marketplace-2.png",
+      "/images/bidoro-marketplace-3.png",
+      "/images/bidoro-marketplace-4.png",
+      "/images/bidoro-marketplace-5.png",
+      "/images/bidoro-marketplace-6.png",
+    ],
+    tags: ["Next.js", "Node.js", "Express", "Supabase"],
+    liveUrl: "https://staging.bidoro.africa/",
+  },
+  {
+    id: 3,
+    title: "Guardtrol Website",
+    description: "Security management and tracking dashboard for guard patrol operations.",
+    images: [
+      "/images/guardtrol-1.png",
+      "/images/guardtrol-2.png",
+      "/images/guardtrol-3.png",
+      "/images/guardtrol-4.png",
+      "/images/guardtrol-5.png",
+      "/images/guardtrol-6.png",
+    ],
+    tags: ["MongoDB", "Express", "React", "Node.js"],
+    liveUrl: "https://guardtroltest.alphatrol.com/",
+  },
+  {
+    id: 4,
+    title: "Agent Logistics",
+    description: "Specialised vehicle transport and haulage platform with real-time GPS tracking.",
+    images: [
+      "/images/agent-logistics-1.png",
+      "/images/agent-logistics-2.png",
+      "/images/agent-logistics-3.png",
+      "/images/agent-logistics-4.png",
+      "/images/agent-logistics-5.png",
+      "/images/agent-logistics-6.png",
+    ],
+    tags: ["PHP", "HTML", "CSS"],
+    liveUrl: "https://www.agentlogistic.com/",
+  },
+  {
+    id: 5,
+    title: "Stafftrol Website",
+    description: "Staff management dashboard with attendance, payroll, and workforce tracking.",
+    images: [
+      "/images/stafftrol-1.png",
+      "/images/stafftrol-2.png",
+      "/images/stafftrol-3.png",
+      "/images/stafftrol-4.png",
+      "/images/stafftrol-5.png",
+      "/images/stafftrol-6.png",
+    ],
+    tags: ["MongoDB", "Express", "React", "Node.js"],
+    liveUrl: "https://stafftroltest.alphatrol.com",
+  },
+  {
+    id: 6,
+    title: "FoodMeApp",
+    description: "Cross-platform mobile health and meal tracking app with water intake and goal features.",
+    images: [
+      "/images/foodmeapp-1.png",
+      "/images/foodmeapp-2.png",
+      "/images/foodmeapp-3.png",
+      "/images/foodmeapp-4.png",
+      "/images/foodmeapp-5.png",
+    ],
+    tags: ["React Native", "Expo", "Firebase"],
+    liveUrl:
+      "https://expo.dev/accounts/jaybosco/projects/FoodMeApp/builds/decc78fc-9112-4870-9a13-22219d7f8f88",
+  },
+  {
+    id: 7,
+    title: "Elevate (Elev8)",
+    description: "Community-rooted social enterprise platform supporting Black and migrant creatives through leadership development, coaching, events, and entrepreneurship programmes.",
+    images: [
+      "/images/elevate-1.png",
+      "/images/elevate-2.png",
+      "/images/elevate-3.png",
+      "/images/elevate-4.png",
+      "/images/elevate-5.png",
+      "/images/elevate-6.png",
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind"],
+    liveUrl: "https://eleva8.netlify.app/",
+  },
+  {
+    id: 8,
+    title: "Miragold Tutors",
+    description: "Professional tutoring platform helping children excel in 11+ entrance exams through structured small-group lessons, mock exams, and personalised coaching.",
+    images: [
+      "/images/miragold-1.png",
+      "/images/miragold-2.png",
+      "/images/miragold-3.png",
+      "/images/miragold-4.png",
+      "/images/miragold-5.png",
+      "/images/miragold-6.png",
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind"],
+    liveUrl: "https://miragoldtutors.com/",
+  },
+
+];
+
+export const services: Service[] = [
+  {
+    icon: "fa-solid fa-laptop-code",
+    title: "Frontend Development",
+    short: "I specialise in HTML, CSS/SCSS, JavaScript, and Bootstrap.",
+    full: "I build beautiful and responsive interfaces with frameworks like React.js, Angular, and tools like Tailwind to improve UI/UX performance.",
+  },
+  {
+    icon: "fa-solid fa-laptop-code",
+    title: "Back End Development",
+    short: "Skilled in backend frameworks and server-side logic.",
+    full: "I use technologies like Node.js, Python, PHP, Laravel, Firebase, SQL, MongoDB, and ASP.NET to build robust and secure web applications.",
+  },
+  {
+    icon: "fa-solid fa-mobile",
+    title: "Mobile Development",
+    short: "I develop full-stack mobile apps using React Native.",
+    full: "With tools like Node.js, Expo, NoSQL, Firebase, and Git, I build cross-platform mobile apps that are fast, functional, and user-friendly.",
+  },
+];
