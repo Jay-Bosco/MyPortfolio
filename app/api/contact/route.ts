@@ -4,32 +4,40 @@ export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
 
-    // Pull fields out of the incoming FormData
-    const payload: Record<string, string> = {};
-    formData.forEach((value, key) => {
-      if (typeof value === "string") payload[key] = value;
+    const fname    = formData.get("fname")    as string;
+    const lname    = formData.get("lname")    as string;
+    const email    = formData.get("email")    as string;
+    const phone    = formData.get("phone")    as string;
+    const subject  = formData.get("subject")  as string;
+    const message  = formData.get("message")  as string;
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: process.env.WEB3FORMS_KEY,   // set in .env.local
+        name: `${fname} ${lname}`.trim(),
+        email,
+        phone,
+        subject: subject || "New contact from portfolio",
+        message,
+        from_name: "Hamzat Portfolio",
+      }),
     });
 
-    // Send to FormSubmit as JSON — avoids all FormData / multipart issues
-    const res = await fetch(
-      "https://formsubmit.co/ajax/hamzatajibola401@gmail.com",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      }
-    );
+    const data = await res.json();
+    console.log("[contact] Web3Forms response:", data);
 
-    const data = await res.json().catch(() => ({}));
-    return NextResponse.json(data, { status: res.ok ? 200 : 500 });
+    if (!data.success) {
+      return NextResponse.json({ error: data.message || "Failed to send." }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
-    console.error("Contact route error:", err);
-    return NextResponse.json(
-      { error: "Failed to send message. Please try again." },
-      { status: 500 }
-    );
+    console.error("[contact] Error:", err);
+    return NextResponse.json({ error: String(err) }, { status: 500 });
   }
 }
