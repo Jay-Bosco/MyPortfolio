@@ -93,7 +93,7 @@ export default function Hero() {
             { value: "8+",   label: "Projects Shipped" },
             { value: "3+",   label: "Years Experience"  },
             { value: "MERN", label: "Primary Stack"     },
-            { value: "∞",    label: "Curiosity"         },
+            { value: "∞",    label: "Positivity"         },
           ].map((s) => (
             <div key={s.label} className="group cursor-default text-center">
               <div className="font-display text-4xl text-blue-light leading-none tracking-wide group-hover:text-white transition-colors duration-300">
