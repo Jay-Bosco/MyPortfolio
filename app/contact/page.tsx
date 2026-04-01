@@ -27,7 +27,7 @@ export default function ContactPage() {
     setStatus("sending");
     const form = e.currentTarget;
     try {
-      const res = await fetch("https://formsubmit.co/ajax/hamzatajibola401@gmail.com", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: new FormData(form),

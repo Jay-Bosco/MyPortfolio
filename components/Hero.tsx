@@ -43,7 +43,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-light/25 bg-blue-light/5 font-heading text-blue-light text-xs tracking-[3px] uppercase mb-10"
           style={{ animation: "fadeUp 0.7s ease 0.1s both" }}>
           <span className="w-1.5 h-1.5 rounded-full bg-blue-light animate-pulse" />
-          Full-Stack Developer · Nigeria
+          Full-Stack Developer · Lagos, Nigeria
         </div>
 
         {/* Big name */}
@@ -90,10 +90,10 @@ export default function Hero() {
         <div className="flex flex-wrap gap-12 justify-center"
           style={{ animation: "fadeUp 0.8s ease 0.7s both" }}>
           {[
-            { value: "8+",   label: "Projects Shipped" },
+            { value: "6+",   label: "Projects Shipped" },
             { value: "3+",   label: "Years Experience"  },
             { value: "MERN", label: "Primary Stack"     },
-            { value: "∞",    label: "Positivity"         },
+            { value: "∞",    label: "Curiosity"         },
           ].map((s) => (
             <div key={s.label} className="group cursor-default text-center">
               <div className="font-display text-4xl text-blue-light leading-none tracking-wide group-hover:text-white transition-colors duration-300">

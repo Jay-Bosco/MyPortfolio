@@ -23,8 +23,6 @@ export default function Quote() {
       className="relative overflow-hidden"
       style={{ background: "#04080f", paddingTop: "7rem", paddingBottom: "7rem" }}
     >
-      {/* ── Background layers (pointer-events-none, strictly decorative) ── */}
-
       {/* Radial blue glow */}
       <div
         aria-hidden="true"
@@ -46,15 +44,34 @@ export default function Quote() {
         }}
       />
 
-      {/* Giant ghost "POSITIVE" — fixed to the vertical centre of the section */}
+      {/*
+        Ghost background — "STAY POSITIVE"
+        Desktop: single line  |  Mobile: two stacked lines
+        Pinned to vertical centre of the section
+      */}
       <div
         aria-hidden="true"
-        className="absolute left-0 right-0 flex justify-center pointer-events-none select-none overflow-hidden"
+        className="absolute left-0 right-0 flex flex-col items-center justify-center pointer-events-none select-none overflow-hidden"
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
+        {/* On md+ screens show as one line; hide the split version */}
         <span
-          className="font-display leading-none tracking-[6px] whitespace-nowrap"
-          style={{ fontSize: "clamp(8rem, 24vw, 24rem)", color: "rgba(255,255,255,0.038)" }}
+          className="hidden md:block font-display leading-none tracking-[6px] whitespace-nowrap"
+          style={{ fontSize: "clamp(6rem, 18vw, 18rem)", color: "rgba(255,255,255,0.038)" }}
+        >
+          STAY POSITIVE
+        </span>
+
+        {/* On small screens show as two stacked lines */}
+        <span
+          className="md:hidden font-display leading-none tracking-[4px] text-center"
+          style={{ fontSize: "clamp(4rem, 22vw, 10rem)", color: "rgba(255,255,255,0.038)" }}
+        >
+          STAY
+        </span>
+        <span
+          className="md:hidden font-display leading-none tracking-[4px] text-center"
+          style={{ fontSize: "clamp(4rem, 22vw, 10rem)", color: "rgba(255,255,255,0.038)" }}
         >
           POSITIVE
         </span>
@@ -70,11 +87,11 @@ export default function Quote() {
           transition: "opacity 0.85s ease, transform 0.85s ease",
         }}
       >
-        {/* — MANTRA label — */}
+        {/* MANTRA label */}
         <div className="flex items-center justify-center gap-4 mb-10">
           <span className="w-10 h-px" style={{ background: "rgba(96,165,250,0.3)" }} />
           <span
-            className="font-heading text-blue-light text-xs tracking-[5px] uppercase"
+            className="font-heading text-blue-light text-xs uppercase"
             style={{ letterSpacing: "5px" }}
           >
             Mantra
@@ -82,7 +99,7 @@ export default function Quote() {
           <span className="w-10 h-px" style={{ background: "rgba(96,165,250,0.3)" }} />
         </div>
 
-        {/* — THE POWER OF — */}
+        {/* THE POWER OF */}
         <h2
           className="font-display text-white leading-none tracking-[4px] block mb-1"
           style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}
@@ -90,7 +107,7 @@ export default function Quote() {
           THE POWER OF
         </h2>
 
-        {/* — POSITIVITY shimmer — */}
+        {/* POSITIVITY shimmer */}
         <h2
           className="font-display shimmer-text leading-none tracking-[4px] block mb-14"
           style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}
@@ -98,14 +115,14 @@ export default function Quote() {
           POSITIVITY
         </h2>
 
-        {/* — Dove divider — */}
+        {/* Dove divider */}
         <div className="flex items-center justify-center gap-6 mb-6">
           <span className="flex-1 max-w-[80px] h-px" style={{ background: "rgba(255,255,255,0.08)" }} />
           <span className="text-2xl leading-none select-none">🕊️</span>
           <span className="flex-1 max-w-[80px] h-px" style={{ background: "rgba(255,255,255,0.08)" }} />
         </div>
 
-        {/* — Ire Lo Jasi — */}
+        {/* Ire Lo Jasi */}
         <p
           className="font-heading text-white/50 font-semibold uppercase mb-14"
           style={{ fontSize: "0.9rem", letterSpacing: "7px" }}
@@ -113,7 +130,7 @@ export default function Quote() {
           🔥&nbsp; Ire Lo Jasi &nbsp;🔥
         </p>
 
-        {/* — CTAs — */}
+        {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             href="/contact"
@@ -123,12 +140,10 @@ export default function Quote() {
               boxShadow: "0 0 0 rgba(37,99,235,0)",
             }}
             onMouseEnter={(e) =>
-              ((e.currentTarget as HTMLElement).style.boxShadow =
-                "0 0 35px rgba(37,99,235,0.5)")
+              ((e.currentTarget as HTMLElement).style.boxShadow = "0 0 35px rgba(37,99,235,0.5)")
             }
             onMouseLeave={(e) =>
-              ((e.currentTarget as HTMLElement).style.boxShadow =
-                "0 0 0 rgba(37,99,235,0)")
+              ((e.currentTarget as HTMLElement).style.boxShadow = "0 0 0 rgba(37,99,235,0)")
             }
           >
             <span className="relative z-10 flex items-center gap-2">
@@ -142,10 +157,7 @@ export default function Quote() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-10 py-4 font-heading font-semibold tracking-widest uppercase text-sm rounded-full transition-all duration-300 hover:scale-105"
-            style={{
-              border: "1px solid rgba(255,255,255,0.12)",
-              color: "rgba(255,255,255,0.55)",
-            }}
+            style={{ border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.55)" }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLElement).style.borderColor = "rgba(96,165,250,0.4)";
               (e.currentTarget as HTMLElement).style.color = "white";
