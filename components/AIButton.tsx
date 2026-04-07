@@ -21,7 +21,7 @@ export default function AIButton() {
 
       {/* Button */}
       <a
-        href="https://huggingface.co/spaces/Jay-Bosco/Assistant_AI"
+        href="https://huggingface.co/spaces/Jay-Bosco/Supriya"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="AI Assistant"

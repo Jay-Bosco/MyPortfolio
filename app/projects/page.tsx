@@ -58,7 +58,7 @@ export default function ProjectsPage() {
             className="font-body text-white/45 text-lg mt-6 max-w-xl"
             style={{ animation: "fadeUp 0.8s ease 0.35s both" }}
           >
-            Several shipped products across web, mobile, and SaaS — each solving a real problem.
+            Eight plus shipped products across web, mobile, and SaaS — each solving a real problem.
           </p>
         </div>
       </section>
