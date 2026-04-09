@@ -90,7 +90,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-12 justify-center"
           style={{ animation: "fadeUp 0.8s ease 0.7s both" }}>
           {[
-            { value: "6+",   label: "Projects Shipped" },
+            { value: "8+",   label: "Projects Shipped" },
             { value: "3+",   label: "Years Experience"  },
             { value: "MERN", label: "Primary Stack"     },
             { value: "∞",    label: "Curiosity"         },
