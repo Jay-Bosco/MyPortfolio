@@ -120,6 +120,51 @@ export const projects: Project[] = [
     tags: ["Next.js", "React", "TypeScript", "Tailwind"],
     liveUrl: "https://miragoldtutors.com/",
   },
+  {
+    id: 9,
+    title: "GHRI Foundation",
+    description: "Nonprofit platform for the Global Health Reform Initiative Foundation, promoting equitable healthcare access through telemedicine, preventive care, and community health programmes.",
+    images: [
+      "/images/ghri-1.jpeg",
+      "/images/ghri-2.jpeg",
+      "/images/ghri-3.jpeg",
+      "/images/ghri-4.jpeg",
+      "/images/ghri-5.jpeg",
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind"],
+    liveUrl: "https://ghrif.org/",
+  },
+  {
+    id: 10,
+    title: "KDN",
+    description: "Nigerian news aggregator app delivering trending stories across politics, entertainment, business, and culture, with category browsing and bookmarking.",
+    images: [
+      "/images/kdn-1.jpg",
+      "/images/kdn-2.jpg",
+      "/images/kdn-3.jpg",
+      "/images/kdn-4.jpg",
+      "/images/kdn-5.jpg",
+    ],
+    tags: ["React Native", "Expo", "Fastify"],
+    liveUrl: "https://expo.dev/accounts/jaybosco/projects/new-mobile-app-kdnnn/builds/9aa3e309-e878-4b1d-b8a4-4ba590c252f7",
+  },
+  {
+    id: 11,
+    title: "Igbodate",
+    description: "Igbo culture-focused social and dating app blending matchmaking with community features — regional group chats, a short-video feed, post creation, direct messaging, and a creator rewards programme.",
+    images: [
+      "/images/igbodate-1.jpeg",
+      "/images/igbodate-2.jpeg",
+      "/images/igbodate-3.jpeg",
+      "/images/igbodate-4.jpeg",
+      "/images/igbodate-5.jpeg",
+      "/images/igbodate-6.jpeg",
+      "/images/igbodate-7.jpeg",
+      "/images/igbodate-8.jpeg",
+    ],
+    tags: ["React Native", "Expo", "Node.js", "Socket.io"],
+    liveUrl: "https://igbodate.com",
+  },
 
 ];
 
