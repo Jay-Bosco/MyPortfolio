@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import type { Project } from "@/types";
 
 interface Props {
@@ -11,9 +11,24 @@ interface Props {
 
 export default function ProjectCard({ project, onImageClick }: Props) {
   const [current, setCurrent] = useState(0);
+  const [expanded, setExpanded] = useState(false);
+  const [isTruncated, setIsTruncated] = useState(false);
+  const descRef = useRef<HTMLParagraphElement>(null);
   const touchStartX = useRef<number | null>(null);
   const touchEndX   = useRef<number | null>(null);
   const SWIPE_THRESHOLD = 40; // px
+  const isMobileApp = project.tags.includes("Mobile App");
+
+  useLayoutEffect(() => {
+    const check = () => {
+      const el = descRef.current;
+      if (!el || expanded) return; // only measure while clamped
+      setIsTruncated(el.scrollHeight > el.clientHeight + 1);
+    };
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [project.description, expanded]);
 
   const prev = (e?: React.MouseEvent) => {
     e?.stopPropagation();
@@ -44,10 +59,12 @@ export default function ProjectCard({ project, onImageClick }: Props) {
   };
 
   return (
-    <div className="group glass rounded-2xl overflow-hidden hover:border-blue-light/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)] flex flex-col">
+    <div className="group glass rounded-2xl overflow-hidden hover:border-blue-light/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)] flex flex-col h-full">
       {/* Carousel */}
       <div
-        className="relative h-52 overflow-hidden bg-ink-200 flex-shrink-0 touch-pan-y"
+        className={`relative overflow-hidden bg-ink-200 flex-shrink-0 touch-pan-y ${
+          isMobileApp ? "h-[420px]" : "h-52"
+        }`}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -66,7 +83,7 @@ export default function ProjectCard({ project, onImageClick }: Props) {
                 src={src}
                 alt={`${project.title} screenshot ${i + 1}`}
                 fill
-                className="object-cover object-top"
+                className={isMobileApp ? "object-contain" : "object-cover object-top"}
                 sizes="(max-width: 768px) 100vw, 370px"
                 draggable={false}
               />
@@ -123,7 +140,22 @@ export default function ProjectCard({ project, onImageClick }: Props) {
       {/* Card body */}
       <div className="p-6 flex flex-col flex-1">
         <h5 className="font-heading text-white font-bold text-base mb-2 tracking-wide">{project.title}</h5>
-        <p className="font-body text-white/40 text-sm leading-relaxed mb-4 flex-1">{project.description}</p>
+        <div className="flex-1">
+          <p
+            ref={descRef}
+            className={`font-body text-white/40 text-sm leading-relaxed mb-2 ${expanded ? "" : "line-clamp-3"}`}
+          >
+            {project.description}
+          </p>
+          {isTruncated && (
+            <button
+              onClick={(e) => { e.stopPropagation(); setExpanded((v) => !v); }}
+              className="self-start font-heading text-blue-light text-xs tracking-wide uppercase mb-3 hover:text-white transition-colors"
+            >
+              {expanded ? "Show less" : "Read more"}
+            </button>
+          )}
+        </div>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((t) => (
             <span key={t} className="tag">{t}</span>

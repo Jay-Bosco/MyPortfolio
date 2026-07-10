@@ -1,4 +1,4 @@
-import type { Project, Service } from "@/types";
+import type { Project, Service, Certificate } from "@/types";
 
 export const projects: Project[] = [
   {
@@ -77,21 +77,6 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: "FoodMeApp",
-    description: "Cross-platform mobile health and meal tracking app with water intake and goal features.",
-    images: [
-      "/images/foodmeapp-1.png",
-      "/images/foodmeapp-2.png",
-      "/images/foodmeapp-3.png",
-      "/images/foodmeapp-4.png",
-      "/images/foodmeapp-5.png",
-    ],
-    tags: ["React Native", "Expo", "Firebase"],
-    liveUrl:
-      "https://expo.dev/accounts/jaybosco/projects/FoodMeApp/builds/decc78fc-9112-4870-9a13-22219d7f8f88",
-  },
-  {
-    id: 7,
     title: "Elevate (Elev8)",
     description: "Community-rooted social enterprise platform supporting Black and migrant creatives through leadership development, coaching, events, and entrepreneurship programmes.",
     images: [
@@ -106,7 +91,7 @@ export const projects: Project[] = [
     liveUrl: "https://eleva8.netlify.app/",
   },
   {
-    id: 8,
+    id: 7,
     title: "Miragold Tutors",
     description: "Professional tutoring platform helping children excel in 11+ entrance exams through structured small-group lessons, mock exams, and personalised coaching.",
     images: [
@@ -121,7 +106,7 @@ export const projects: Project[] = [
     liveUrl: "https://miragoldtutors.com/",
   },
   {
-    id: 9,
+    id: 8,
     title: "GHRI Foundation",
     description: "Nonprofit platform for the Global Health Reform Initiative Foundation, promoting equitable healthcare access through telemedicine, preventive care, and community health programmes.",
     images: [
@@ -135,7 +120,37 @@ export const projects: Project[] = [
     liveUrl: "https://ghrif.org/",
   },
   {
+    id: 9,
+    title: "Luxero",
+    description: "Elegant luxury watch e-commerce store with an authenticated timepiece marketplace, brand and collection search, escrow-protected checkout, and a global network of trusted dealers.",
+    images: [
+      "/images/luxero-1.png",
+      "/images/luxero-2.png",
+      "/images/luxero-3.png",
+      "/images/luxero-4.png",
+      "/images/luxero-5.png",
+      "/images/luxero-6.png",
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind"],
+    liveUrl: "https://luxerowatchess.netlify.app/",
+  },
+  {
     id: 10,
+    title: "FoodMe",
+    description: "Cross-platform mobile health and meal tracking app with water intake and goal features.",
+    images: [
+      "/images/foodmeapp-1.png",
+      "/images/foodmeapp-2.png",
+      "/images/foodmeapp-3.png",
+      "/images/foodmeapp-4.png",
+      "/images/foodmeapp-5.png",
+    ],
+    tags: ["Mobile App", "React Native", "Expo", "Firebase"],
+    liveUrl:
+      "https://expo.dev/accounts/jaybosco/projects/FoodMeApp/builds/decc78fc-9112-4870-9a13-22219d7f8f88",
+  },
+  {
+    id: 11,
     title: "KDN",
     description: "Nigerian news aggregator app delivering trending stories across politics, entertainment, business, and culture, with category browsing and bookmarking.",
     images: [
@@ -145,11 +160,11 @@ export const projects: Project[] = [
       "/images/kdn-4.jpg",
       "/images/kdn-5.jpg",
     ],
-    tags: ["React Native", "Expo", "Fastify"],
+    tags: ["Mobile App", "React Native", "Expo", "Fastify"],
     liveUrl: "https://expo.dev/accounts/jaybosco/projects/new-mobile-app-kdnnn/builds/9aa3e309-e878-4b1d-b8a4-4ba590c252f7",
   },
   {
-    id: 11,
+    id: 12,
     title: "Igbodate",
     description: "Igbo culture-focused social and dating app blending matchmaking with community features — regional group chats, a short-video feed, post creation, direct messaging, and a creator rewards programme.",
     images: [
@@ -162,10 +177,37 @@ export const projects: Project[] = [
       "/images/igbodate-7.jpeg",
       "/images/igbodate-8.jpeg",
     ],
-    tags: ["React Native", "Expo", "Node.js", "Socket.io"],
+    tags: ["Mobile App", "React Native", "Expo", "Node.js", "Socket.io"],
     liveUrl: "https://igbodate.com",
   },
 
+];
+
+export const certificates: Certificate[] = [
+  {
+    id: 1,
+    title: "JavaScript Algorithms and Data Structures",
+    issuer: "freeCodeCamp",
+    date: "August 31, 2022",
+    image: "/images/cert-1.png",
+    verifyUrl: "https://freecodecamp.org/certification/jay-bosco/javascript-algorithms-and-data-structures",
+  },
+  {
+    id: 2,
+    title: "Front-End Development Libraries",
+    issuer: "freeCodeCamp",
+    date: "December 24, 2022",
+    image: "/images/cert-2.png",
+    verifyUrl: "https://freecodecamp.org/certification/jay-bosco/front-end-development-libraries",
+  },
+  {
+    id: 3,
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    date: "July 10, 2026",
+    image: "/images/cert-3.png",
+    verifyUrl: "https://freecodecamp.org/certification/jay-bosco/responsive-web-design",
+  },
 ];
 
 export const services: Service[] = [

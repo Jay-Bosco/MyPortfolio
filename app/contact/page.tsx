@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AIButton from "@/components/AIButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import Watermark from "@/components/Watermark";
 
 // ─── Replace this with your key from https://web3forms.com/ ───
 const WEB3FORMS_KEY = "41dfe2ad-f40b-454c-8792-52c5c324433c";
@@ -89,6 +90,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[#030b18]/88" />
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 50% 60% at 50% 30%, rgba(37,99,235,0.1) 0%, transparent 65%)" }} />
         <div className="absolute bottom-0 left-0 right-0 h-28" style={{ background: "linear-gradient(to top, #04080f, transparent)" }} />
+        <Watermark />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-light/25 bg-blue-light/5 font-heading text-blue-light text-xs tracking-[3px] uppercase mb-8"

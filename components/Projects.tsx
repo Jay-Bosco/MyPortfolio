@@ -34,7 +34,7 @@ export default function Projects({ limit, showCta = true }: Props) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {displayed.map((p, i) => (
-            <div key={p.id} className="reveal" style={{ transitionDelay: `${(i % 3) * 0.1}s` }}>
+            <div key={p.id} className="reveal h-full" style={{ transitionDelay: `${(i % 3) * 0.1}s` }}>
               <ProjectCard project={p} onImageClick={(imgs, idx) => setLb({ images: imgs, index: idx })} />
             </div>
           ))}

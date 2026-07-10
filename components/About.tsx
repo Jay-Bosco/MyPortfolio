@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Watermark from "./Watermark";
 
 const skills = [
   { label: "React / Next.js",   pct: 90 },
@@ -24,7 +25,8 @@ export default function About() {
         className="absolute -right-40 top-1/3 w-96 h-96 rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 70%)" }}
       />
-      <div className="max-w-7xl mx-auto px-6">
+      <Watermark />
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Label */}
         <div className="reveal flex items-center gap-4 mb-4">
           <span className="font-heading text-blue-light text-xs tracking-[4px] uppercase font-semibold">
@@ -69,7 +71,7 @@ export default function About() {
             >
               Developer
               <br />
-              <span className="text-blue-light">&amp; Designer</span>
+              <span className="text-blue-light">&amp; Engineer</span>
             </h2>
 
             <p className="font-body text-white/55 leading-relaxed mb-6 text-base">

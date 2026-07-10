@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import AIButton from "@/components/AIButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import About from "@/components/About";
+import Certificates from "@/components/Certificates";
 import Hobbies from "@/components/Hobbies";
+import Watermark from "@/components/Watermark";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -15,9 +17,19 @@ export const metadata: Metadata = {
 
 const timeline = [
   {
+    year: "2020",
+    title: "Started Learning to Code",
+    desc: "Began learning web development fundamentals — HTML, CSS, and JavaScript — through freeCodeCamp and Udemy, laying the foundation for a career in software engineering.",
+  },
+  {
+    year: "2021",
+    title: "Still Learning",
+    desc: "Kept deepening my skills through freeCodeCamp and Udemy courses, moving from fundamentals into JavaScript frameworks and backend basics.",
+  },
+  {
     year: "2022",
-    title: "Started Professional Journey",
-    desc: "Began working on client projects, building responsive web applications and REST APIs.",
+    title: "Started Career as an Intern",
+    desc: "Landed my first internship, working on real client projects and REST APIs while sharpening my full-stack skills.",
   },
   {
     year: "2023",
@@ -134,6 +146,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Certifications ── */}
+      <Certificates />
+
       {/* ── Timeline ── */}
       <section className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -199,6 +214,7 @@ export default function AboutPage() {
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(37,99,235,0.08) 0%, transparent 70%)" }}
         />
+        <Watermark />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center reveal">
           <h2
             className="font-display tracking-[2px] mb-6"

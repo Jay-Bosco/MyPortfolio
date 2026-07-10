@@ -7,6 +7,15 @@ export interface Project {
   liveUrl: string;
 }
 
+export interface Certificate {
+  id: number;
+  title: string;
+  issuer: string;
+  date: string;
+  image: string;
+  verifyUrl: string;
+}
+
 export interface Service {
   icon: string;
   title: string;

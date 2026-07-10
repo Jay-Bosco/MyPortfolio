@@ -24,20 +24,21 @@ export default function ProjectsGrid() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: 28 }}>
             {projects.map((p, pi) => {
               const curr = getCurrent(p.id);
+              const isMobileApp = p.tags.includes("Mobile App");
               return (
                 <div key={p.id} className="reveal" style={{ transitionDelay: `${(pi % 3) * 0.1}s`, borderRadius: 20, overflow: "hidden", border: "1px solid rgba(59,130,246,0.1)", background: "#030b18", transition: "all 0.4s" }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(59,130,246,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 24px 60px rgba(59,130,246,0.08)"; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(59,130,246,0.1)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}
                 >
                   {/* Carousel */}
-                  <div style={{ position: "relative", height: 220, overflow: "hidden", background: "#0a1a35" }}
+                  <div style={{ position: "relative", height: isMobileApp ? 420 : 220, overflow: "hidden", background: "#0a1a35" }}
                     onMouseEnter={e => { e.currentTarget.querySelectorAll(".car-btn").forEach(b => ((b as HTMLElement).style.opacity = "1")); }}
                     onMouseLeave={e => { e.currentTarget.querySelectorAll(".car-btn").forEach(b => ((b as HTMLElement).style.opacity = "0")); }}
                   >
                     <div style={{ display: "flex", height: "100%", transition: "transform 0.4s cubic-bezier(0.16,1,0.3,1)", transform: `translateX(-${curr * 100}%)` }}>
                       {p.images.map((src, ii) => (
                         <div key={ii} style={{ minWidth: "100%", height: "100%", flexShrink: 0, cursor: "zoom-in" }} onClick={() => openLightbox(p.images, ii)}>
-                          <img src={src} alt={`${p.title} ${ii + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} />
+                          <img src={src} alt={`${p.title} ${ii + 1}`} style={{ width: "100%", height: "100%", objectFit: isMobileApp ? "contain" : "cover", objectPosition: "top center" }} />
                         </div>
                       ))}
                     </div>

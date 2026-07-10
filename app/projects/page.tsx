@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import AIButton from "@/components/AIButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import Projects from "@/components/Projects";
+import Watermark from "@/components/Watermark";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export default function ProjectsPage() {
           className="absolute bottom-0 left-0 right-0 h-28"
           style={{ background: "linear-gradient(to top, #04080f, transparent)" }}
         />
+        <Watermark />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div
@@ -72,6 +74,7 @@ export default function ProjectsPage() {
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse 50% 60% at 50% 50%, rgba(37,99,235,0.07) 0%, transparent 70%)" }}
         />
+        <Watermark />
         <div className="relative z-10 max-w-5xl mx-auto px-6 reveal">
           <div
             className="glass rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between gap-8 border-blue-light/20 hover:border-blue-light/35 transition-all duration-500"
