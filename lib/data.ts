@@ -208,6 +208,14 @@ export const certificates: Certificate[] = [
     image: "/images/cert-3.png",
     verifyUrl: "https://freecodecamp.org/certification/jay-bosco/responsive-web-design",
   },
+  {
+    id: 4,
+    title: "Legacy Front-End",
+    issuer: "freeCodeCamp",
+    date: "July 15, 2026",
+    image: "/images/cert-4.png",
+    verifyUrl: "https://freecodecamp.org/certification/jay-bosco/legacy-front-end",
+  },
 ];
 
 export const services: Service[] = [
