@@ -3,17 +3,19 @@ import type { Project, Service, Certificate } from "@/types";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Bidoro Waitlist",
-    description: "Landing page and waitlist signup for the Bidoro marketplace platform.",
+    title: "Convert Tide",
+    description: "AI marketing platform that generates buyer personas, campaigns, and complete marketing plans in minutes.",
     images: [
-      "/images/bidoro-waitlist-1.png",
-      "/images/bidoro-waitlist-2.png",
-      "/images/bidoro-waitlist-3.png",
-      "/images/bidoro-waitlist-4.png",
-      "/images/bidoro-waitlist-5.png",
+      "/images/converttide-1.png",
+      "/images/converttide-2.png",
+      "/images/converttide-3.png",
+      "/images/converttide-4.png",
+      "/images/converttide-5.png",
+      "/images/converttide-6.png",
+      "/images/converttide-7.png",
     ],
-    tags: ["Next.js", "Node.js", "Express", "Supabase"],
-    liveUrl: "https://bidoro.africa",
+    tags: ["Next.js", "React", "TypeScript", "AI"],
+    liveUrl: "https://converttide.com",
   },
   {
     id: 2,
@@ -28,7 +30,7 @@ export const projects: Project[] = [
       "/images/bidoro-marketplace-6.png",
     ],
     tags: ["Next.js", "Node.js", "Express", "Supabase"],
-    liveUrl: "https://staging.bidoro.africa/",
+    liveUrl: "https://bidoro.africa",
   },
   {
     id: 3,
