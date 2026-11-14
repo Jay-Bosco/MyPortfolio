@@ -12,7 +12,7 @@ export default function Home() {
       <ScrollReveal />
       <Navbar />
       <Hero />
-      <Projects limit={4} showCta />
+      <Projects limit={3} showCta />
       <Quote />
       <Footer />
       <AIButton />
