@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects — Hamzat Ajibola",
-  description: "A full showcase of projects built by Hamzat Ajibola — web, mobile, and SaaS applications.",
+  description: "Production web apps, mobile products, and client dashboards built by Hamzat Ajibola.",
 };
 
 const categories = ["All", "Web App", "Mobile", "Dashboard", "Marketplace"];
@@ -60,7 +60,7 @@ export default function ProjectsPage() {
             className="font-body text-white/45 text-lg mt-6 max-w-xl"
             style={{ animation: "fadeUp 0.8s ease 0.35s both" }}
           >
-            Eight plus shipped products across web, mobile, and SaaS — each solving a real problem.
+            Twelve shipped products across web, mobile, and client dashboards.
           </p>
         </div>
       </section>
@@ -84,10 +84,10 @@ export default function ProjectsPage() {
                 className="font-display tracking-[2px] mb-3"
                 style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", lineHeight: 1 }}
               >
-                Have a <span className="text-blue-light">Project?</span>
+                Open to <span className="text-blue-light">Remote</span>
               </h2>
               <p className="font-body text-white/45 text-base max-w-md">
-                I&apos;m available for freelance work and full-time opportunities. Let&apos;s build something great together.
+                Remote full-time roles and contract work. UK, EU, and US Eastern hours.
               </p>
             </div>
             <a

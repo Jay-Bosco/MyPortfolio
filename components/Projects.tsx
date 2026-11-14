@@ -8,17 +8,23 @@ import Lightbox from "./Lightbox";
 
 interface Props { limit?: number; showCta?: boolean; }
 
+const LEAD_IDS = [1, 12, 2, 7];
+
 export default function Projects({ limit, showCta = true }: Props) {
   const [lb, setLb] = useState<{ images: string[]; index: number } | null>(null);
-  const displayed = limit ? projects.slice(0, limit) : projects;
+  const ordered = [
+    ...LEAD_IDS.map((id) => projects.find((p) => p.id === id)).filter((p) => p != null),
+    ...projects.filter((p) => !LEAD_IDS.includes(p.id)),
+  ];
+  const displayed = limit ? ordered.slice(0, limit) : ordered;
 
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
-      <div className="absolute bottom-0 left-4 section-num select-none pointer-events-none pb-4">03</div>
+      <div className="absolute bottom-0 left-4 section-num select-none pointer-events-none pb-4">01</div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="reveal flex items-center gap-4 mb-4">
           <span className="font-heading text-blue-light text-xs tracking-[4px] uppercase font-semibold">
-            03 — Projects
+            01 · Work
           </span>
           <span className="h-px w-12 bg-blue-light/30" />
         </div>
@@ -29,7 +35,7 @@ export default function Projects({ limit, showCta = true }: Props) {
           Selected <span className="text-blue-light">Work</span>
         </h2>
         <p className="reveal font-body text-white/40 text-base mb-14 max-w-xl">
-          A curated set of projects — from marketplaces and SaaS dashboards to cross-platform mobile apps.
+          Production web apps, mobile products, and client dashboards. Each one is live.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

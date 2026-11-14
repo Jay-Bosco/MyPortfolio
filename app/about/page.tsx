@@ -12,48 +12,38 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About — Hamzat Ajibola",
-  description: "Learn more about Hamzat Ajibola, a Full-Stack Developer based in Lagos, Nigeria.",
+  description: "Hamzat Ajibola is a full-stack engineer shipping production web and mobile products. Open to remote roles.",
 };
 
 const timeline = [
   {
-    year: "2020",
-    title: "Started Learning to Code",
-    desc: "Began learning web development fundamentals — HTML, CSS, and JavaScript — through freeCodeCamp and Udemy, laying the foundation for a career in software engineering.",
-  },
-  {
-    year: "2021",
-    title: "Still Learning",
-    desc: "Kept deepening my skills through freeCodeCamp and Udemy courses, moving from fundamentals into JavaScript frameworks and backend basics.",
-  },
-  {
     year: "2022",
-    title: "Started Career as an Intern",
-    desc: "Landed my first internship, working on real client projects and REST APIs while sharpening my full-stack skills.",
+    title: "Internship",
+    desc: "First production work on client projects and REST APIs.",
   },
   {
     year: "2023",
-    title: "Full-Stack Expansion",
-    desc: "Expanded into mobile development with React Native and Expo. Shipped multiple cross-platform apps.",
+    title: "Mobile products",
+    desc: "Shipped cross-platform apps with React Native and Expo, including health, news, and social products.",
   },
   {
     year: "2024",
-    title: "Bidoro & Alphatrol Projects",
-    desc: "Led frontend and backend development for Bidoro marketplace and Alphatrol's suite of SaaS products.",
+    title: "Bidoro and Alphatrol",
+    desc: "Frontend and backend for the Bidoro marketplace and Alphatrol operations tools: patrol tracking, staff, and attendance.",
   },
   {
-    year: "2025–",
-    title: "Scaling & Growing",
-    desc: "Continuously pushing the envelope — deeper TypeScript, cloud infrastructure, and system design.",
+    year: "2025",
+    title: "Product builds",
+    desc: "Shipped startup and nonprofit products: an AI marketing platform, education and health sites, and live mobile apps.",
   },
 ];
 
 const techStack = [
-  { label: "Frontend",  items: ["React.js", "Next.js", "Angular", "Tailwind CSS", "Bootstrap", "SCSS"] },
-  { label: "Backend",   items: ["Node.js", "Express", "PHP", "Laravel", "Python", "ASP.NET"] },
-  { label: "Mobile",    items: ["React Native", "Expo", "Flutter", "Dart"] },
-  { label: "Database",  items: ["MongoDB", "PostgreSQL", "MySQL", "Supabase", "Firebase"] },
-  { label: "Tools",     items: ["Git", "GitHub", "VS Code", "Figma", "Postman"] },
+  { label: "Frontend",  items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+  { label: "Backend",   items: ["Node.js", "Express", "Fastify", "PHP"] },
+  { label: "Mobile",    items: ["React Native", "Expo", "Socket.io"] },
+  { label: "Database",  items: ["MongoDB", "PostgreSQL", "Supabase", "Firebase"] },
+  { label: "Tools",     items: ["Git", "GitHub", "Figma", "Postman"] },
 ];
 
 export default function AboutPage() {
@@ -223,7 +213,7 @@ export default function AboutPage() {
             Ready to <span className="text-blue-light">Collaborate?</span>
           </h2>
           <p className="font-body text-white/45 text-base mb-10">
-            I&apos;m always open to new projects, ideas, and conversations.
+            Open to remote full-time roles and contract work.
           </p>
           <Link
             href="/contact"

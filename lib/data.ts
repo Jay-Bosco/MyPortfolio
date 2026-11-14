@@ -4,7 +4,8 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Convert Tide",
-    description: "AI marketing platform that generates buyer personas, campaigns, and complete marketing plans in minutes.",
+    role: "Product UI",
+    description: "Product interface for an AI marketing platform. A user can generate buyer personas, campaigns, and a full marketing plan from one flow.",
     images: [
       "/images/converttide-1.png",
       "/images/converttide-2.png",
@@ -20,7 +21,8 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Bidoro Marketplace",
-    description: "Full-featured marketplace connecting buyers and sellers across Nigeria.",
+    role: "Full-stack",
+    description: "Marketplace for buyers and sellers, including listings, discovery, and the account flow around a live storefront.",
     images: [
       "/images/bidoro-marketplace-1.png",
       "/images/bidoro-marketplace-2.png",
@@ -34,8 +36,9 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Guardtrol Website",
-    description: "Security management and tracking dashboard for guard patrol operations.",
+    title: "Guardtrol",
+    role: "Full-stack",
+    description: "Security operations dashboard for guard patrols: routes, tracking, and the screens supervisors use to run shifts.",
     images: [
       "/images/guardtrol-1.png",
       "/images/guardtrol-2.png",
@@ -50,7 +53,8 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Agent Logistics",
-    description: "Specialised vehicle transport and haulage platform with real-time GPS tracking.",
+    role: "Web",
+    description: "Vehicle transport and haulage site with service pages and GPS tracking for shipments.",
     images: [
       "/images/agent-logistics-1.png",
       "/images/agent-logistics-2.png",
@@ -64,8 +68,9 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Stafftrol Website",
-    description: "Staff management dashboard with attendance, payroll, and workforce tracking.",
+    title: "Stafftrol",
+    role: "Full-stack",
+    description: "Staff platform covering attendance, payroll views, and workforce tracking for day-to-day operations.",
     images: [
       "/images/stafftrol-1.png",
       "/images/stafftrol-2.png",
@@ -80,7 +85,8 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Elevate (Elev8)",
-    description: "Community-rooted social enterprise platform supporting Black and migrant creatives through leadership development, coaching, events, and entrepreneurship programmes.",
+    role: "Frontend",
+    description: "Site for a social enterprise that runs leadership, coaching, events, and entrepreneurship programmes for creatives.",
     images: [
       "/images/elevate-1.png",
       "/images/elevate-2.png",
@@ -95,7 +101,8 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "Miragold Tutors",
-    description: "Professional tutoring platform helping children excel in 11+ entrance exams through structured small-group lessons, mock exams, and personalised coaching.",
+    role: "Frontend",
+    description: "Tutoring site for exam preparation: programmes, small-group lessons, mock exams, and a clear enquiry path for parents.",
     images: [
       "/images/miragold-1.png",
       "/images/miragold-2.png",
@@ -110,7 +117,8 @@ export const projects: Project[] = [
   {
     id: 8,
     title: "GHRI Foundation",
-    description: "Nonprofit platform for the Global Health Reform Initiative Foundation, promoting equitable healthcare access through telemedicine, preventive care, and community health programmes.",
+    role: "Frontend",
+    description: "Site for a health nonprofit covering telemedicine, preventive care, and community health programmes.",
     images: [
       "/images/ghri-1.jpeg",
       "/images/ghri-2.jpeg",
@@ -124,7 +132,8 @@ export const projects: Project[] = [
   {
     id: 9,
     title: "Luxero",
-    description: "Elegant luxury watch e-commerce store with an authenticated timepiece marketplace, brand and collection search, escrow-protected checkout, and a global network of trusted dealers.",
+    role: "Frontend",
+    description: "Luxury watch storefront with brand and collection browsing, dealer listings, and checkout.",
     images: [
       "/images/luxero-1.png",
       "/images/luxero-2.png",
@@ -139,7 +148,8 @@ export const projects: Project[] = [
   {
     id: 10,
     title: "FoodMe",
-    description: "Cross-platform mobile health and meal tracking app with water intake and goal features.",
+    role: "Mobile",
+    description: "Mobile health app for meal logging, water intake, and daily goals.",
     images: [
       "/images/foodmeapp-1.png",
       "/images/foodmeapp-2.png",
@@ -154,7 +164,8 @@ export const projects: Project[] = [
   {
     id: 11,
     title: "KDN",
-    description: "Nigerian news aggregator app delivering trending stories across politics, entertainment, business, and culture, with category browsing and bookmarking.",
+    role: "Mobile",
+    description: "News app with category browsing, trending stories, and bookmarks across politics, entertainment, business, and culture.",
     images: [
       "/images/kdn-1.jpg",
       "/images/kdn-2.jpg",
@@ -168,7 +179,8 @@ export const projects: Project[] = [
   {
     id: 12,
     title: "Igbodate",
-    description: "Igbo culture-focused social and dating app blending matchmaking with community features — regional group chats, a short-video feed, post creation, direct messaging, and a creator rewards programme.",
+    role: "Mobile and API",
+    description: "Cross-platform social app with matchmaking, regional group chats, a short-video feed, direct messaging, and creator rewards.",
     images: [
       "/images/igbodate-1.jpeg",
       "/images/igbodate-2.jpeg",
@@ -224,19 +236,19 @@ export const services: Service[] = [
   {
     icon: "fa-solid fa-laptop-code",
     title: "Frontend Development",
-    short: "I specialise in HTML, CSS/SCSS, JavaScript, and Bootstrap.",
-    full: "I build beautiful and responsive interfaces with frameworks like React.js, Angular, and tools like Tailwind to improve UI/UX performance.",
+    short: "Interfaces in React, Next.js, and TypeScript.",
+    full: "I build responsive product interfaces with React, Next.js, TypeScript, and Tailwind, then connect them to real APIs.",
   },
   {
     icon: "fa-solid fa-laptop-code",
     title: "Back End Development",
-    short: "Skilled in backend frameworks and server-side logic.",
-    full: "I use technologies like Node.js, Python, PHP, Laravel, Firebase, SQL, MongoDB, and ASP.NET to build robust and secure web applications.",
+    short: "APIs and data layers that support the product.",
+    full: "I build server-side logic with Node.js, Express, MongoDB, PostgreSQL, Supabase, and Firebase.",
   },
   {
     icon: "fa-solid fa-mobile",
     title: "Mobile Development",
-    short: "I develop full-stack mobile apps using React Native.",
-    full: "With tools like Node.js, Expo, NoSQL, Firebase, and Git, I build cross-platform mobile apps that are fast, functional, and user-friendly.",
+    short: "Cross-platform apps with React Native and Expo.",
+    full: "I ship iOS and Android apps with React Native and Expo, backed by Node, Firebase, and realtime messaging where the product needs it.",
   },
 ];

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hamzat Ajibola — Full-Stack Developer",
+  title: "Hamzat Ajibola | Full-Stack Engineer",
   description:
-    "Full-Stack Developer specialising in web and mobile applications. Building clean, scalable, and efficient solutions from Lagos, Nigeria.",
-  keywords: ["full-stack developer", "web developer", "React", "Next.js", "Nigeria", "Lagos"],
+    "Full-stack engineer shipping production web and mobile products with Next.js, React, Node, and React Native. Open to remote roles.",
+  keywords: ["full-stack engineer", "React", "Next.js", "TypeScript", "Node.js", "React Native", "remote"],
   authors: [{ name: "Hamzat Ajibola" }],
 };
 

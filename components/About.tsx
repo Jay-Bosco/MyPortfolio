@@ -4,18 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Watermark from "./Watermark";
 
-const skills = [
-  { label: "React / Next.js",   pct: 90 },
-  { label: "Node.js / Express", pct: 85 },
-  { label: "React Native",      pct: 80 },
-  { label: "MongoDB / SQL",     pct: 80 },
-  { label: "TypeScript",        pct: 75 },
-  { label: "PHP / Laravel",     pct: 70 },
-];
-
 const chips = [
-  "Frontend Development","Backend Development","Mobile Apps",
-  "Database Management","Problem Solving","Team Work","Time Management",
+  "Next.js", "React", "TypeScript", "Node.js",
+  "React Native", "PostgreSQL", "MongoDB", "Supabase",
 ];
 
 export default function About() {
@@ -30,7 +21,7 @@ export default function About() {
         {/* Label */}
         <div className="reveal flex items-center gap-4 mb-4">
           <span className="font-heading text-blue-light text-xs tracking-[4px] uppercase font-semibold">
-            02 — About Me
+            02 · About
           </span>
           <span className="h-px w-12 bg-blue-light/30" />
         </div>
@@ -69,38 +60,17 @@ export default function About() {
               className="font-display leading-none tracking-[2px] mb-6"
               style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}
             >
-              Developer
+              Full-Stack
               <br />
-              <span className="text-blue-light">&amp; Engineer</span>
+              <span className="text-blue-light">Engineer</span>
             </h2>
 
             <p className="font-body text-white/55 leading-relaxed mb-6 text-base">
-              I am a Full-Stack Developer with a passion for building clean, scalable, and
-              efficient solutions. From crafting interactive user experiences to ensuring secure
-              server-side logic — I create responsive, end-to-end applications accessible on any
-              device.
+              I build production products from the interface through to the API. Next.js and React
+              on the web, Node on the server, and React Native when it needs to ship on iOS and
+              Android. Recent work includes an AI marketing platform, a marketplace, operations
+              dashboards, and live mobile apps.
             </p>
-
-            {/* Skill bars */}
-            <div className="mb-8 space-y-3">
-              {skills.map((s) => (
-                <div key={s.label}>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-heading text-white/60 text-xs tracking-wide">{s.label}</span>
-                    <span className="font-heading text-blue-light text-xs">{s.pct}%</span>
-                  </div>
-                  <div className="h-1 w-full bg-ink-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full"
-                      style={{
-                        width: `${s.pct}%`,
-                        background: "linear-gradient(90deg, #1d4ed8, #60a5fa)",
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
 
             {/* Chips */}
             <div className="flex flex-wrap gap-2 mb-8">

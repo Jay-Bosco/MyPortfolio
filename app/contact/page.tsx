@@ -10,10 +10,10 @@ import Watermark from "@/components/Watermark";
 // ─── Replace this with your key from https://web3forms.com/ ───
 const WEB3FORMS_KEY = "41dfe2ad-f40b-454c-8792-52c5c324433c";
 
-const contactDetails = [
+const contactDetails: { icon: string; label: string; value: string; href?: string }[] = [
   { icon: "fa-solid fa-phone",        label: "Phone",    value: "+234 701 014 6824",          href: "tel:+2347010146824" },
   { icon: "fa-solid fa-envelope",     label: "Email",    value: "hamzatajibola401@gmail.com", href: "mailto:hamzatajibola401@gmail.com" },
-  { icon: "fa-solid fa-location-dot", label: "Location", value: "Lagos, Nigeria",             href: "#" },
+  { icon: "fa-solid fa-clock",        label: "Hours",    value: "UK, EU, and US Eastern overlap" },
 ];
 
 const socials = [
@@ -104,7 +104,7 @@ export default function ContactPage() {
           </h1>
           <p className="font-body text-white/45 text-lg mt-6 max-w-xl"
             style={{ animation: "fadeUp 0.8s ease 0.35s both" }}>
-            Have a project, idea, or just want to say hello? My inbox is always open.
+            Hiring for a remote role, or scoping a product? Send a note. I reply within 24 hours.
           </p>
         </div>
       </section>
@@ -127,7 +127,11 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="font-heading text-white/25 text-xs tracking-[3px] uppercase mb-1">{d.label}</p>
-                        <a href={d.href} className="font-body text-white/65 hover:text-blue-light text-sm transition-colors duration-300">{d.value}</a>
+                        {d.href ? (
+                          <a href={d.href} className="font-body text-white/65 hover:text-blue-light text-sm transition-colors duration-300">{d.value}</a>
+                        ) : (
+                          <p className="font-body text-white/65 text-sm">{d.value}</p>
+                        )}
                       </div>
                     </li>
                   ))}
@@ -154,7 +158,7 @@ export default function ContactPage() {
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="font-heading text-emerald-400 text-xs tracking-[3px] uppercase font-semibold">Available for Work</span>
                 </div>
-                <p className="font-body text-white/40 text-sm leading-relaxed">Currently open to freelance projects and full-time roles. Response within 24 hours.</p>
+                <p className="font-body text-white/40 text-sm leading-relaxed">Open to remote full-time roles and contract work. I reply within 24 hours.</p>
               </div>
             </div>
 

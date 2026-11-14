@@ -139,7 +139,8 @@ export default function ProjectCard({ project, onImageClick }: Props) {
 
       {/* Card body */}
       <div className="p-6 flex flex-col flex-1">
-        <h5 className="font-heading text-white font-bold text-base mb-2 tracking-wide">{project.title}</h5>
+        <h5 className="font-heading text-white font-bold text-base tracking-wide">{project.title}</h5>
+        <p className="font-heading text-blue-light/80 text-[11px] tracking-[2px] uppercase mt-1.5 mb-2">{project.role}</p>
         <div className="flex-1">
           <p
             ref={descRef}

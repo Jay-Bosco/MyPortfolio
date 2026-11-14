@@ -66,7 +66,7 @@ export default function Footer() {
           <div>
             <FooterLogo />
             <p className="font-body text-white/40 text-sm leading-relaxed max-w-xs">
-              Full-Stack Developer building clean, scalable web &amp; mobile applications. Lagos, Nigeria.
+              Full-stack engineer shipping production web and mobile products. Open to remote roles.
             </p>
           </div>
 
@@ -97,6 +97,14 @@ export default function Footer() {
             </div>
             <p className="font-body text-white/30 text-xs">hamzatajibola401@gmail.com</p>
             <p className="font-body text-white/30 text-xs mt-1">+234 701 014 6824</p>
+            <a
+              href="/Hamzat_Ajibola_Resume.pdf"
+              download="Hamzat_Ajibola_Resume.pdf"
+              className="inline-flex items-center gap-2 mt-4 font-heading text-xs tracking-widest uppercase text-blue-light/70 hover:text-blue-light transition-colors duration-300"
+            >
+              <i className="fa-solid fa-download text-[10px]" />
+              Download CV
+            </a>
           </div>
         </div>
 

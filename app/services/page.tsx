@@ -18,8 +18,8 @@ const services = [
     title: "Frontend Development",
     tagline: "Interfaces that feel alive",
     description:
-      "I build pixel-perfect, performant UIs using React.js, Next.js, Angular, and Tailwind CSS. Every component is crafted with accessibility, responsiveness, and smooth animation in mind.",
-    items: ["React.js / Next.js", "Angular", "Tailwind CSS / SCSS / Bootstrap", "Responsive & Mobile-First", "Framer Motion / CSS Animations", "SEO Optimisation"],
+      "Product interfaces with React, Next.js, TypeScript, and Tailwind. Responsive layouts, clear flows, and pages that stay fast.",
+    items: ["React / Next.js", "TypeScript", "Tailwind CSS", "Responsive layouts"],
   },
   {
     number: "02",
@@ -27,8 +27,8 @@ const services = [
     title: "Backend Development",
     tagline: "Robust infrastructure, zero compromise",
     description:
-      "From RESTful APIs to real-time systems — I engineer server-side solutions that are secure, scalable, and maintainable using Node.js, Python, PHP, and more.",
-    items: ["Node.js / Express.js", "PHP / Laravel", "Python / Django", "REST & GraphQL APIs", "Authentication & Security", "Third-party Integrations"],
+      "APIs and data layers with Node.js, Express, and Fastify, plus the databases those products actually use.",
+    items: ["Node.js / Express", "Fastify", "REST APIs", "MongoDB / PostgreSQL", "Supabase / Firebase"],
   },
   {
     number: "03",
@@ -36,8 +36,8 @@ const services = [
     title: "Mobile Development",
     tagline: "One codebase, every platform",
     description:
-      "Cross-platform mobile applications built with React Native and Expo that feel native on both iOS and Android — fast, reliable, and user-friendly.",
-    items: ["React Native", "Expo", "Firebase Integration", "Push Notifications", "Offline Support", "App Store Deployment"],
+      "Cross-platform apps with React Native and Expo, including messaging, feeds, and account flows.",
+    items: ["React Native", "Expo", "Firebase", "Socket.io", "Node.js APIs"],
   },
   {
     number: "04",
@@ -98,7 +98,7 @@ export default function ServicesPage() {
             className="font-body text-white/45 text-lg mt-6 max-w-xl"
             style={{ animation: "fadeUp 0.8s ease 0.35s both" }}
           >
-            End-to-end digital solutions — from design system to database schema.
+            Web apps, APIs, and mobile products, taken from interface to deployment.
           </p>
         </div>
       </section>
