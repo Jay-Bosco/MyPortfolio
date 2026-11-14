@@ -84,10 +84,10 @@ export default function ProjectsPage() {
                 className="font-display tracking-[2px] mb-3"
                 style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", lineHeight: 1 }}
               >
-                Open to <span className="text-blue-light">Remote</span>
+                Have a <span className="text-blue-light">Project?</span>
               </h2>
               <p className="font-body text-white/45 text-base max-w-md">
-                Remote full-time roles and contract work. UK, EU, and US Eastern hours.
+                I&apos;m available for freelance work and full-time opportunities. Let&apos;s build something great together.
               </p>
             </div>
             <a

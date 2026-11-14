@@ -66,10 +66,9 @@ export default function About() {
             </h2>
 
             <p className="font-body text-white/55 leading-relaxed mb-6 text-base">
-              I build production products from the interface through to the API. Next.js and React
-              on the web, Node on the server, and React Native when it needs to ship on iOS and
-              Android. Recent work includes an AI marketing platform, a marketplace, operations
-              dashboards, and live mobile apps.
+              I build production products from the interface through to the API, across web and
+              mobile. The stack follows the product. Recent work includes an AI marketing
+              platform, a marketplace, operations dashboards, and live mobile apps.
             </p>
 
             {/* Chips */}

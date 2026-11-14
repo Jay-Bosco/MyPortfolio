@@ -66,7 +66,7 @@ export default function Footer() {
           <div>
             <FooterLogo />
             <p className="font-body text-white/40 text-sm leading-relaxed max-w-xs">
-              Full-stack engineer shipping production web and mobile products. Open to remote roles.
+              Full-Stack Developer building clean, scalable web and mobile applications.
             </p>
           </div>
 

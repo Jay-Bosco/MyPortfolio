@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About — Hamzat Ajibola",
-  description: "Hamzat Ajibola is a full-stack engineer shipping production web and mobile products. Open to remote roles.",
+  description: "Learn more about Hamzat Ajibola, a Full-Stack Developer.",
 };
 
 const timeline = [
@@ -213,7 +213,7 @@ export default function AboutPage() {
             Ready to <span className="text-blue-light">Collaborate?</span>
           </h2>
           <p className="font-body text-white/45 text-base mb-10">
-            Open to remote full-time roles and contract work.
+            I&apos;m always open to new projects, ideas, and conversations.
           </p>
           <Link
             href="/contact"

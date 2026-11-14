@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 const socials = [
+  { icon: "fa-brands fa-whatsapp",  href: "https://wa.me/+2347010146824",                         label: "WhatsApp" },
   { icon: "fa-brands fa-linkedin",  href: "https://www.linkedin.com/in/hamzat-ajibola-1a904a239", label: "LinkedIn" },
   { icon: "fa-brands fa-github",    href: "https://github.com/Jay-Bosco",                         label: "GitHub"   },
 ];
@@ -42,7 +43,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-light/25 bg-blue-light/5 font-heading text-blue-light text-xs tracking-[3px] uppercase mb-10"
           style={{ animation: "fadeUp 0.7s ease 0.1s both" }}>
           <span className="w-1.5 h-1.5 rounded-full bg-blue-light animate-pulse" />
-          Full-Stack Engineer · Open to Remote
+          Full-Stack Developer
         </div>
 
         {/* Big name */}
@@ -60,28 +61,28 @@ export default function Hero() {
         {/* Tagline */}
         <p className="font-body italic text-white/35 text-lg mt-6 mb-4 tracking-wide"
           style={{ animation: "fadeUp 0.8s ease 0.4s both" }}>
-          Web, mobile, and the API behind them
+          Building the future, one commit at a time
         </p>
 
         {/* Description */}
         <p className="font-body text-white/52 text-base leading-relaxed max-w-lg mb-10"
           style={{ animation: "fadeUp 0.8s ease 0.5s both" }}>
-          I ship <span className="text-blue-pale font-medium">production products</span> with
-          Next.js, React, Node, and React Native. Open to remote roles, with overlap for UK, EU, and US Eastern hours.
+          I craft <span className="text-blue-pale font-medium">end-to-end digital products</span>, from
+          pixel-perfect interfaces to robust server architecture, that scale with your ambitions.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-wrap gap-4 justify-center mb-16"
           style={{ animation: "fadeUp 0.8s ease 0.6s both" }}>
-          <Link href="/projects"
+          <Link href="/contact"
             className="group relative overflow-hidden px-9 py-4 rounded-full font-heading font-semibold text-sm tracking-widest uppercase text-white transition-all duration-300 hover:shadow-[0_0_35px_rgba(37,99,235,0.5)] hover:scale-105"
             style={{ background: "linear-gradient(135deg, #1d4ed8, #2563eb)" }}>
-            <span className="relative z-10">View Work</span>
+            <span className="relative z-10">Hire Me</span>
             <span className="absolute inset-0 bg-blue-mid opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Link>
-          <Link href="/contact"
+          <Link href="/projects"
             className="px-9 py-4 rounded-full font-heading font-semibold text-sm tracking-widest uppercase text-white/70 border border-white/15 hover:border-blue-light/50 hover:text-white hover:bg-blue-light/5 transition-all duration-300 hover:scale-105">
-            Contact
+            View Projects
           </Link>
           <a
             href="/Hamzat_Ajibola_Resume.pdf"
@@ -97,10 +98,10 @@ export default function Hero() {
         <div className="flex flex-wrap gap-12 justify-center"
           style={{ animation: "fadeUp 0.8s ease 0.7s both" }}>
           {[
-            { value: "12+",    label: "Products shipped" },
-            { value: "3+",     label: "Years building"   },
-            { value: "Remote", label: "UK, EU, US East"  },
-            { value: "Next.js", label: "React and Node"  },
+            { value: "12+",  label: "Projects Shipped" },
+            { value: "3+",   label: "Years Experience"  },
+            { value: "MERN", label: "Primary Stack"     },
+            { value: "∞",    label: "Curiosity"         },
           ].map((s) => (
             <div key={s.label} className="group cursor-default text-center">
               <div className="font-display text-4xl text-blue-light leading-none tracking-wide group-hover:text-white transition-colors duration-300">
